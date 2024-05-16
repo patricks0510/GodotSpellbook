@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://c4mxk0x4hrnjk"]
+
+[ext_resource type="PackedScene" uid="uid://4aj38bd6mf6d" path="res://scenes/bg.tscn" id="1_lk2ym"]
+[ext_resource type="Script" path="res://scripts/cantrips.gd" id="1_tqm75"]
+
+[node name="Cantrips" type="Node2D"]
+script = ExtResource("1_tqm75")
+
+[node name="BG" parent="." instance=ExtResource("1_lk2ym")]
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0

@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://b6pp1pgygqn7f"]
+
+[ext_resource type="FontFile" uid="uid://bjslsg1p5tj4v" path="res://assets/fonts/Godot-Open-Fontpack/fonts/montreal/Montreal-Regular.ttf" id="1_da2ki"]
+[ext_resource type="Script" path="res://scripts/front_page.gd" id="1_qu30t"]
+[ext_resource type="PackedScene" uid="uid://4aj38bd6mf6d" path="res://scenes/bg.tscn" id="2_0giwr"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_olt02"]
+font = ExtResource("1_da2ki")
+font_size = 64
+font_color = Color(0, 0, 0, 1)
+outline_size = 3
+shadow_size = 5
+shadow_color = Color(0, 0, 0, 0.690196)
+
+[node name="FrontPage" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_qu30t")
+
+[node name="BG" parent="." instance=ExtResource("2_0giwr")]
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 18.0
+offset_top = 32.0
+offset_right = 815.0
+offset_bottom = 120.0
+scale = Vector2(0.713678, 2.12166)
+text = "The Animated Spellbook"
+label_settings = SubResource("LabelSettings_olt02")
+
+[node name="CantripsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 692.0
+offset_top = 246.0
+offset_right = 766.0
+offset_bottom = 277.0
+text = "Cantrips"
+
+[connection signal="pressed" from="CantripsButton" to="." method="_on_cantrips_button_pressed"]

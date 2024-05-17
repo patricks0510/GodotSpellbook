@@ -1,0 +1,180 @@
+[gd_scene load_steps=13 format=3 uid="uid://b6p7rr2vv0aje"]
+
+[ext_resource type="Script" path="res://scripts/spell_display.gd" id="1_8b1uq"]
+[ext_resource type="FontFile" uid="uid://di3vl3hwp0bdo" path="res://assets/fonts/MorrisRoman-Black.ttf" id="1_aitss"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_g3qf6"]
+font = ExtResource("1_aitss")
+font_size = 32
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_1u2jt"]
+font = ExtResource("1_aitss")
+font_size = 24
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8qpl4"]
+font = ExtResource("1_aitss")
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_hyj6e"]
+font = ExtResource("1_aitss")
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8gc7l"]
+font = ExtResource("1_aitss")
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_fb8ff"]
+font = ExtResource("1_aitss")
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vbpsj"]
+font = ExtResource("1_aitss")
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_xr71j"]
+font = ExtResource("1_aitss")
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_0hi7s"]
+font = ExtResource("1_aitss")
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_awiu2"]
+font = ExtResource("1_aitss")
+font_color = Color(0, 0, 0, 1)
+
+[node name="SpellDisplay" type="ColorRect"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -635.0
+offset_bottom = 683.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.12)
+script = ExtResource("1_8b1uq")
+
+[node name="SpellName" type="Label" parent="."]
+layout_mode = 0
+offset_right = 205.0
+offset_bottom = 42.0
+scale = Vector2(0.669607, 6.46678)
+text = "Spell Name"
+label_settings = SubResource("LabelSettings_g3qf6")
+
+[node name="Description" type="Label" parent="."]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 308.0
+offset_right = 811.0
+offset_bottom = 401.0
+scale = Vector2(0.692517, 4.94899)
+theme_override_font_sizes/font_size = 80
+text = "Description: The Description for the spell goes here"
+label_settings = SubResource("LabelSettings_1u2jt")
+autowrap_mode = 2
+
+[node name="HigherLevel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 917.0
+offset_right = 813.0
+offset_bottom = 983.0
+scale = Vector2(0.692517, 4.94899)
+theme_override_font_sizes/font_size = 80
+text = "HigherLevel: The text for what a spell does when cast at a higher level goes here"
+label_settings = SubResource("LabelSettings_1u2jt")
+autowrap_mode = 2
+
+[node name="Range" type="Label" parent="."]
+layout_mode = 0
+offset_left = 218.0
+offset_top = 33.3334
+offset_right = 269.0
+offset_bottom = 53.3334
+scale = Vector2(0.910496, 7.69595)
+text = "Range"
+label_settings = SubResource("LabelSettings_8qpl4")
+
+[node name="Components" type="Label" parent="."]
+layout_mode = 0
+offset_left = 270.0
+offset_top = 50.0001
+offset_right = 310.0
+offset_bottom = 65.0001
+scale = Vector2(1.37965, 5.99132)
+text = "V,S,M"
+label_settings = SubResource("LabelSettings_hyj6e")
+
+[node name="Duration" type="Label" parent="."]
+layout_mode = 0
+offset_left = 333.0
+offset_top = 50.0001
+offset_right = 387.0
+offset_bottom = 73.0001
+scale = Vector2(1.07347, 5.05482)
+text = "Duration"
+label_settings = SubResource("LabelSettings_8gc7l")
+
+[node name="CastTime" type="Label" parent="."]
+layout_mode = 0
+offset_left = 144.0
+offset_top = 50.0001
+offset_right = 208.0
+offset_bottom = 73.0001
+scale = Vector2(1.0097, 5.12925)
+text = "Cast Time"
+label_settings = SubResource("LabelSettings_fb8ff")
+
+[node name="Level" type="Label" parent="."]
+layout_mode = 0
+offset_left = 442.0
+offset_top = 33.3334
+offset_right = 502.0
+offset_bottom = 56.3334
+scale = Vector2(1.19801, 7.48974)
+text = "Level: #"
+label_settings = SubResource("LabelSettings_vbpsj")
+
+[node name="School" type="Label" parent="."]
+layout_mode = 0
+offset_left = 502.0
+offset_top = 33.3334
+offset_right = 542.0
+offset_bottom = 56.3334
+scale = Vector2(1.44179, 8.52117)
+text = "School"
+label_settings = SubResource("LabelSettings_xr71j")
+
+[node name="ClassSpellLists" type="Label" parent="."]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 1292.0
+offset_right = 196.0
+offset_bottom = 1309.0
+scale = Vector2(0.991131, 4.73418)
+text = "Class Spell List"
+label_settings = SubResource("LabelSettings_0hi7s")
+
+[node name="PageNum" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 1283.34
+offset_right = 67.0
+offset_bottom = 1298.34
+scale = Vector2(0.534543, 6.05068)
+text = "PageNum"
+label_settings = SubResource("LabelSettings_awiu2")
+
+[node name="Source" type="Label" parent="."]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 1283.34
+offset_right = 108.0
+offset_bottom = 1298.34
+scale = Vector2(0.534543, 6.05068)
+text = "Source
+"
+label_settings = SubResource("LabelSettings_awiu2")

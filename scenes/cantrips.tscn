@@ -1,13 +1,46 @@
-[gd_scene load_steps=3 format=3 uid="uid://c4mxk0x4hrnjk"]
+[gd_scene load_steps=4 format=3 uid="uid://c4mxk0x4hrnjk"]
 
 [ext_resource type="PackedScene" uid="uid://4aj38bd6mf6d" path="res://scenes/bg.tscn" id="1_lk2ym"]
 [ext_resource type="Script" path="res://scripts/cantrips.gd" id="1_tqm75"]
+[ext_resource type="PackedScene" uid="uid://b6p7rr2vv0aje" path="res://scenes/spell_display.tscn" id="3_vywtd"]
 
 [node name="Cantrips" type="Node2D"]
 script = ExtResource("1_tqm75")
 
 [node name="BG" parent="." instance=ExtResource("1_lk2ym")]
 
-[node name="RichTextLabel" type="RichTextLabel" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+[node name="SpellDisplay" parent="." instance=ExtResource("3_vywtd")]
+offset_left = 4.0
+offset_top = 18.0
+offset_right = 4.0
+offset_bottom = 701.0
+
+[node name="SpellDisplay2" parent="." instance=ExtResource("3_vywtd")]
+offset_left = 4.0
+offset_top = 273.0
+offset_right = 4.0
+offset_bottom = 956.0
+
+[node name="SpellDisplay3" parent="." instance=ExtResource("3_vywtd")]
+offset_left = 4.0
+offset_top = 527.0
+offset_right = 4.0
+offset_bottom = 1210.0
+
+[node name="SpellDisplay4" parent="." instance=ExtResource("3_vywtd")]
+offset_left = 615.0
+offset_top = 30.0
+offset_right = 615.0
+offset_bottom = 713.0
+
+[node name="SpellDisplay5" parent="." instance=ExtResource("3_vywtd")]
+offset_left = 612.0
+offset_top = 274.0
+offset_right = 612.0
+offset_bottom = 957.0
+
+[node name="SpellDisplay6" parent="." instance=ExtResource("3_vywtd")]
+offset_left = 617.0
+offset_top = 526.0
+offset_right = 617.0
+offset_bottom = 1209.0

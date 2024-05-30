@@ -1,13 +1,41 @@
-[gd_scene load_steps=4 format=3 uid="uid://c4mxk0x4hrnjk"]
+[gd_scene load_steps=6 format=3 uid="uid://c4mxk0x4hrnjk"]
 
 [ext_resource type="PackedScene" uid="uid://4aj38bd6mf6d" path="res://scenes/bg.tscn" id="1_lk2ym"]
 [ext_resource type="Script" path="res://scripts/cantrips.gd" id="1_tqm75"]
+[ext_resource type="Texture2D" uid="uid://d4bke7ltm568p" path="res://assets/arrowBlue_left.png" id="3_sdow6"]
 [ext_resource type="PackedScene" uid="uid://b6p7rr2vv0aje" path="res://scenes/spell_display.tscn" id="3_vywtd"]
+[ext_resource type="Texture2D" uid="uid://bqgw8y2rxyqd3" path="res://assets/arrowBlue_right.png" id="4_m63un"]
 
 [node name="Cantrips" type="Node2D"]
 script = ExtResource("1_tqm75")
 
 [node name="BG" parent="." instance=ExtResource("1_lk2ym")]
+
+[node name="HorzDiv" type="ColorRect" parent="BG"]
+anchors_preset = 14
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_right = -800.0
+offset_bottom = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(3, 3)
+color = Color(0, 0, 0, 1)
+
+[node name="Back" type="TextureButton" parent="BG"]
+offset_left = 3.0
+offset_top = -1.0
+offset_right = 43.0
+offset_bottom = 39.0
+texture_normal = ExtResource("3_sdow6")
+
+[node name="Next" type="TextureButton" parent="BG"]
+offset_left = 1174.0
+offset_top = 1.0
+offset_right = 1214.0
+offset_bottom = 41.0
+texture_normal = ExtResource("4_m63un")
 
 [node name="SpellDisplay" parent="." instance=ExtResource("3_vywtd")]
 offset_left = 4.0
@@ -16,31 +44,22 @@ offset_right = 4.0
 offset_bottom = 701.0
 
 [node name="SpellDisplay2" parent="." instance=ExtResource("3_vywtd")]
-offset_left = 4.0
-offset_top = 273.0
-offset_right = 4.0
-offset_bottom = 956.0
+offset_left = 7.0
+offset_top = 361.0
+offset_right = 7.0
+offset_bottom = 1044.0
 
 [node name="SpellDisplay3" parent="." instance=ExtResource("3_vywtd")]
-offset_left = 4.0
-offset_top = 527.0
-offset_right = 4.0
-offset_bottom = 1210.0
+offset_left = 621.0
+offset_top = 16.0
+offset_right = 621.0
+offset_bottom = 699.0
 
 [node name="SpellDisplay4" parent="." instance=ExtResource("3_vywtd")]
-offset_left = 615.0
-offset_top = 30.0
-offset_right = 615.0
-offset_bottom = 713.0
+offset_left = 616.0
+offset_top = 360.0
+offset_right = 616.0
+offset_bottom = 1043.0
 
-[node name="SpellDisplay5" parent="." instance=ExtResource("3_vywtd")]
-offset_left = 612.0
-offset_top = 274.0
-offset_right = 612.0
-offset_bottom = 957.0
-
-[node name="SpellDisplay6" parent="." instance=ExtResource("3_vywtd")]
-offset_left = 617.0
-offset_top = 526.0
-offset_right = 617.0
-offset_bottom = 1209.0
+[connection signal="pressed" from="BG/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="BG/Next" to="." method="_on_next_pressed"]

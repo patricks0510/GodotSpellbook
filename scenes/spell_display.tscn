@@ -10,6 +10,7 @@ font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_1u2jt"]
 font = ExtResource("1_aitss")
+font_size = 22
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_8qpl4"]
@@ -75,10 +76,9 @@ label_settings = SubResource("LabelSettings_g3qf6")
 layout_mode = 0
 offset_left = 5.0
 offset_top = 308.0
-offset_right = 811.0
-offset_bottom = 401.0
-scale = Vector2(0.661337, 5.82197)
-theme_override_font_sizes/font_size = 80
+offset_right = 565.0
+offset_bottom = 398.0
+scale = Vector2(1, 2.5)
 text = "Description: The Description for the spell goes here"
 label_settings = SubResource("LabelSettings_1u2jt")
 autowrap_mode = 2
@@ -87,9 +87,9 @@ autowrap_mode = 2
 layout_mode = 0
 offset_left = 1.0
 offset_top = 917.0
-offset_right = 813.0
-offset_bottom = 983.0
-scale = Vector2(0.692517, 4.94899)
+offset_right = 551.0
+offset_bottom = 977.0
+scale = Vector2(1, 2.5)
 theme_override_font_sizes/font_size = 80
 text = "HigherLevel: The text for what a spell does when cast at a higher level goes here"
 label_settings = SubResource("LabelSettings_1u2jt")
@@ -157,10 +157,10 @@ label_settings = SubResource("LabelSettings_xr71j")
 
 [node name="ClassSpellLists" type="Label" parent="."]
 layout_mode = 0
-offset_left = 328.0
-offset_top = 1275.0
-offset_right = 619.0
-offset_bottom = 1317.0
+offset_left = 234.0
+offset_top = 1279.17
+offset_right = 525.0
+offset_bottom = 1321.17
 scale = Vector2(0.511621, 2.33067)
 text = "Class Spell List"
 label_settings = SubResource("LabelSettings_0hi7s")
